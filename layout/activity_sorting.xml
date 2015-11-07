@@ -1,0 +1,152 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.priyanka.myapps.SortingActivity">
+
+    android:background="#c8cbff"
+    android:onClick="onClickSort">
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioG"
+        android:layout_below="@+id/ettext"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Best Case"
+            android:id="@+id/BtnBest"
+            android:checked="false" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Average Case"
+            android:id="@+id/BtnAver"
+            android:checked="false" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Worst Case"
+            android:id="@+id/Btnworst"
+            android:checked="false" />
+    </RadioGroup>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Generate Array"
+        android:id="@+id/BtnGenerate"
+        android:background="#8289ff"
+        android:layout_below="@+id/radioG"
+        android:layout_centerHorizontal="true"
+        android:onClick="onClickListen" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/etgenerated"
+        android:hint="Generated array will be displayed here..!!"
+        android:layout_below="@+id/BtnGenerate"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Insertion Sort"
+        android:id="@+id/btnInsertion"
+        android:background="#8289ff"
+        android:onClick="onClickSort"
+        android:layout_above="@+id/btnbubble"
+        android:layout_toLeftOf="@+id/BtnGenerate"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bubble Sort"
+        android:id="@+id/btnbubble"
+        android:background="#8289ff"
+        android:onClick="onClickSort"
+        android:layout_above="@+id/btnselection"
+        android:layout_alignLeft="@+id/btnInsertion"
+        android:layout_alignStart="@+id/btnInsertion"
+        android:layout_alignRight="@+id/btnInsertion"
+        android:layout_alignEnd="@+id/btnInsertion" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SelectionSort"
+        android:id="@+id/btnselection"
+        android:background="#8289ff"
+        android:onClick="onClickSort"
+        android:layout_above="@+id/btnBench"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/BtnGenerate"
+        android:layout_toLeftOf="@+id/BtnGenerate" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BenchMark All"
+        android:id="@+id/btnBench"
+        android:background="#ff531c"
+        android:onClick="onClickSort"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ettime"
+        android:hint="Time for insertion"
+        android:layout_alignBottom="@+id/btnInsertion"
+        android:layout_alignRight="@+id/ettext"
+        android:layout_alignEnd="@+id/ettext" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ettimebubble"
+        android:hint="Time taken for bubble"
+        android:layout_alignBottom="@+id/btnbubble"
+        android:layout_alignRight="@+id/editTimeSelection"
+        android:layout_alignEnd="@+id/editTimeSelection"
+        android:layout_alignLeft="@+id/editTimeSelection"
+        android:layout_alignStart="@+id/editTimeSelection" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTimeSelection"
+        android:hint="Time  taken for Selection"
+        android:layout_alignBottom="@+id/btnselection"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberSigned"
+        android:ems="10"
+        android:id="@+id/ettext"
+        android:layout_toEndOf="@+id/BtnGenerate"
+        android:layout_toRightOf="@id/BtnGenerate"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:hint="Enter the size of array" />
+</RelativeLayout>

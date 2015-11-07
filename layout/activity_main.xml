@@ -1,0 +1,93 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:onClick="Navigate"
+    android:background="#ff2f43">
+
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="GreetUser"
+        android:id="@+id/btnGreet"
+        android:onClick="Navigate"
+        android:background="#fcffe8"
+        android:layout_above="@+id/btnCalci"
+        android:layout_alignLeft="@+id/btnJokes"
+        android:layout_alignStart="@+id/btnJokes"
+        android:layout_alignRight="@+id/btnCalci"
+        android:layout_alignEnd="@+id/btnCalci" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Calculator"
+        android:id="@+id/btnCalci"
+        android:onClick="Navigate"
+        android:background="#fcffe8"
+        android:layout_above="@+id/btnJokes"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="My Jokes"
+        android:id="@+id/btnJokes"
+        android:onClick="Navigate"
+        android:background="#fcffe8"
+        android:layout_above="@+id/btnInstagram"
+        android:layout_alignRight="@+id/btnInstagram"
+        android:layout_alignEnd="@+id/btnInstagram"
+        android:layout_alignLeft="@+id/btnInstagram"
+        android:layout_alignStart="@+id/btnInstagram" />
+
+    <Button
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Instagram"
+        android:id="@+id/btnInstagram"
+        android:onClick="Navigate"
+        android:background="#fcffe8"
+        android:layout_above="@+id/btnNews"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="News"
+        android:id="@+id/btnNews"
+        android:onClick="Navigate"
+        android:background="#fcffe8"
+        android:layout_above="@+id/btnMusic"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Music"
+        android:id="@+id/btnMusic"
+        android:onClick="Navigate"
+        android:background="#fcffe8"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="95dp" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Camera"
+        android:id="@+id/btnCam"
+        android:layout_marginBottom="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="Navigate" />
+
+</RelativeLayout>

@@ -1,0 +1,51 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.priyanka.myapps.CallAndMessage">
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imBtnContacts"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:src="@mipmap/contacts"
+        android:onClick="openContacts" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnSendMsg"
+        android:src="@mipmap/message"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/etEnterMobNum"
+        android:layout_toStartOf="@+id/etEnterMobNum" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnCall"
+        android:src="@mipmap/call"
+        android:layout_below="@+id/etEnterText"
+        android:layout_toRightOf="@+id/etEnterMobNum"
+        android:layout_toEndOf="@+id/etEnterMobNum" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/etEnterMobNum"
+        android:layout_below="@+id/imBtnContacts"
+        android:layout_centerHorizontal="true"
+        android:hint="Mobile Number" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/etEnterText"
+        android:hint="Enter Your Message"
+        android:layout_above="@+id/btnSendMsg"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>
